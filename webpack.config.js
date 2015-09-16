@@ -3,7 +3,7 @@ module.exports = {
     output: {
         path: './dist',
         filename: 'bundle.js',
-        publicPath: "/dist/"
+        publicPath: '/dist/'
     },
     resolve: {
       modulesDirectories: ['node_modules', 'bower_components', 'modules']
