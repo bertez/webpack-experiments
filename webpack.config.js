@@ -1,20 +1,31 @@
+var webpack = require('webpack');
+
+var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common.js');
+
 module.exports = {
-    entry: './js/main.js',
+    entry: {
+        images: './js/images.js',
+        gifs: './js/gifs.js'
+    },
     output: {
         path: './dist',
-        filename: 'bundle.js',
+        filename: '[name].js',
         publicPath: '/dist/'
     },
     resolve: {
-      modulesDirectories: ['node_modules', 'bower_components', 'modules']
+        modulesDirectories: ['node_modules', 'bower_components', 'modules']
     },
     module: {
-        loaders: [
-            {
+        loaders: [{
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
+            }, {
+                test: /\.css$/,
+                loader: 'style!css'
             }
-       ]
-    }
+
+        ]
+    },
+    plugins: [commonsPlugin]
 };

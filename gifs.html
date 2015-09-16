@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Testing webpack</title>
-</head>
-<body>
 
-<script src="dist/bundle.js" data-start="page" type="text/javascript"></script>
+<head>
+    <title>Testing webpack</title>
+</head>
+
+<body>
+    <header>
+        <h1>Reddit images</h1>
+        <nav>
+            <ul>
+                <li><a href="/" title="Images">Images</a></li>
+                <li><a href="/gifs.html" title="Gifs">Gifs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="ui-gallery">
+    </div>
+    <script src="dist/common.js" type="text/javascript"></script>
+    <script src="dist/gifs.js" type="text/javascript"></script>
 </body>
+
 </html>

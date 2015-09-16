@@ -1,1 +1,3 @@
-console.log('hello from shared');
+import $ from 'jquery';
+
+console.log('shared')
